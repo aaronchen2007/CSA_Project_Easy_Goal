@@ -8,6 +8,11 @@ def rescaleFrame(frame, scale = 0.75):
 
     return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
 
+# only for live videos
+def changeRes(width, height):
+    capture.set(3,width)
+    capture.set(4,height)
+
 
 capture = cv.VideoCapture('/Users/aaronchen/Documents/GitHub/CSA_Project_Easy_Goal/Resources/Videos/dog.mp4')
 
